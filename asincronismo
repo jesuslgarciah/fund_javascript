@@ -1,0 +1,21 @@
+Event loop: JavaScript puede delegar la ejecución de ciertas funciones a 
+otros procesos, debido a que JS solo puede hacer una sola tarea a la vez.
+
+CallStack : también nombradas como pilas de llamadas, almacena la información 
+sobre el codigo que aun esta listo (creado por el programador) 
+para ser ejecutadas en javaScript.
+
+Callback: Es una devolución de llamada, es decir, una función que se ejecuta 
+cuando llegue la respuesta de un servidor a JS. Por ejemplo: ¿que procesos 
+quieres hacer cuando los datos de tu servidor hayan llegado?
+
+Nota: si el CallStack no ha terminado de ser ejecutado es posible que 
+los Callbacks se almacenen en una pila de tareas, y las funciones que 
+tienen los callbacks seran ejecutadas cuando todo el codigo del 
+CallStack seS ejecutada. NO BLOQUEES EL EVENT LOOP
+
+PROMESAS
+
+PENDING -> estado pendiente
+FULFILLED -> completado, resuelto .then
+REJECTED -> estado rechazo .catch
