@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba</title>
+</head>
+<body>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+        crossorigin="anonymous">
+    </script>
+    <script> 
+        // no se sabe cual es el orden
+        /*$.get('https://swapi.co/api/people/1', function (luke) {
+        console.log(luke.name)
+        })
+
+        $.get('https://swapi.co/api/people/4', function (vader) {
+            console.log(vader.name)
+        })*/
+    </script>
+
+    <script>
+        function obtenerPersonaje(url){
+            return $.get(url)
+        }
+        obtenerPersonaje('https://swapi.co/api/people/1')
+            .then(luke => console.log(luke.name))
+
+        console.log('Sacha')
+    </script>
+</body>
+</html>

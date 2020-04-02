@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar contexto a las funciones</title>
+</head>
+<body>
+    <script>
+        const Jesus = {
+            nombre: 'Jesus',
+            apellido: 'Garcia',
+        }
+
+        function saludar(saludo){
+            console.log(`${saludo}, mi nombre es ${this.nombre}`)
+        }
+
+        /*
+            los parametros de la funcion bind, call, apply siempre en primer
+            instancia es el contexto this que deseo pasarle y siguen los 
+            siguiente parametros en el orden de la función
+
+            bind(this, parameters)
+            call(this, parameters)
+            apply(this, [parameters])
+         */
+
+        //ata el this de Jesus a la funcion saludar
+        const saludarAJesus = saludar.bind(Jesus) //return una funcion con el contexto cambiado
+
+        saludar.call(Jesus, 'Hola querido') //llama y ejecuta la funcion, no cambia la funcion
+
+
+        saludar.apply(Jesus, ['Hola amigo'])
+
+    </script>
+</body>
+</html>

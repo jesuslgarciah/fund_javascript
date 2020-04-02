@@ -1,0 +1,33 @@
+Si tengo el siguiente código:
+
+obtenerPersonaje('https://swapi.co/api/people/1')
+        .then(luke => console.log(luke.name))
+
+      console.log('Sacha')
+
+SALE PRIMERO EL NOMBRE DE SACHA
+
+Si tengo el siguiente código:
+
+const luke = await obtenerPersonaje('https://swapi.co/api/people/1')
+      console.log(luke.name)
+      console.log('Sacha')
+
+SALE PRIMERO EL NOMBRE DE SACHA
+
+
+Si tenemos estas dos llamadas a funciones para obtener datos:
+
+  $.get('https://swapi.co/api/people/1', function (luke) {
+        console.log(luke.name)
+      })
+
+      $.get('https://swapi.co/api/people/4', function (vader) {
+        console.log(vader.name)
+      })
+
+NO SE SABE CUAL ES EL ORDEN
+
+
+La función reduce de los arrays sirve para reducir un array a un único valor, teniendo en cuenta todos los elementos del array:
+VERDADERO

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructuras de datos inmutables</title>
+</head>
+<body>
+    <script>
+        const Jesus = {
+            nombre: 'Jesus',
+            apellido: 'Garcia',
+            edad: 24,
+        }
+         //modifica el objeto principal
+        //const cumpleanos = ({edad}) => edad++ 
+
+        //NO MODIFCA EL OBJETO ORIGINAL 
+        const cumpleanosInmutables = persona => ({
+            ...persona,
+            edad: persona.edad++
+        })
+    </script>
+</body>
+</html>
