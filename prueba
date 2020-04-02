@@ -2,7 +2,7 @@ Si tengo el siguiente código:
 
 obtenerPersonaje('https://swapi.co/api/people/1')
         .then(luke => console.log(luke.name))
-
+asdasdas
       console.log('Sacha')
 
 SALE PRIMERO EL NOMBRE DE SACHA
